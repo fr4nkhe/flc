@@ -14,16 +14,16 @@ const (
 	GoFilesSuffix = ".go"
 )
 
-func ReadContent(filename, path string) (string, error) {
+func ReadContent(path string) (string, error) {
 	fmt.Println(path)
-	f, err := os.Open(filename)
+	f, err := os.Open(path)
 	if err != nil {
 		fmt.Println(err.Error())
 	}
 	defer f.Close()
 	fd, err := ioutil.ReadAll(f)
 	if err != nil {
-		fmt.Println("read to fd fail", err)
+		fmt.Println("read to fd fail:", err)
 		return "", nil
 	}
 	fset := token.NewFileSet() // positions are relative to fset
