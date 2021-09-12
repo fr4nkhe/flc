@@ -1,3 +1,3 @@
 # flc
 
-A tool for count function lines.
+A tool for finding the top N length function in go projects.
