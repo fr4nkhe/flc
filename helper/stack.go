@@ -1,4 +1,4 @@
-package main
+package helper
 
 type CountItem struct {
 	Line int
